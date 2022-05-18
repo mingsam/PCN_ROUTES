@@ -247,7 +247,7 @@ if __name__ =='__main__':
     pcnDBInf={
         'USER': 'PCN_TEST',
         'PASS': '784427618',
-        'SID': '172.17.0.2:1521/LHR11G'
+        'SID': '10.112.199.111:1521/LHR11G'
     }
     testRoutes = PCNROUTE(pcnDBInf)
     routeDict = testRoutes.get_all_routes()
