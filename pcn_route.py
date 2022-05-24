@@ -222,7 +222,7 @@ class PCNROUTE():
         return routeDict
 
 
-    def get_all_routes(self):
+    def get_all_routes(self, DataStorage=False):
         pcnDB = self.pcnDB
 
         print("\nStart data acquisition. ")
@@ -238,6 +238,13 @@ class PCNROUTE():
         pcnMap = self.generate_pcnMap(channelInf)
         busDelDict = self.get_circuitous_bus(businessInfDict, pcnMap)
         routeDict = self.get_access_routes(busDelDict, pcnMap)
+
+        if DataStorage:
+            self.busDict = busDict
+            self.businessInfDict = businessInfDict
+            self.channelInf = channelInf
+            self.pcnMap = pcnMap
+            self.routeDict = routeDict
 
         return routeDict
 

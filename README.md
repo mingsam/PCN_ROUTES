@@ -8,4 +8,4 @@
 
 Get all available routes.
 
-## and so on.....
+## and so on

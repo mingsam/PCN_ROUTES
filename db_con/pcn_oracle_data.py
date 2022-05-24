@@ -103,7 +103,16 @@ class PCNDB():
                 tCon_str += '{} {} '.format(conStr, conLogicList[idx_conLogic])
             idx_conLogic += 1
 
-        resDict = self.get_con_str_inf(tName, tCon_str, tCols)
+        if isinstance(tName, list):
+            tNameStr = ''
+            for t in tName:
+                if t == tName[-1]:
+                    tNameStr += t
+                else:
+                    tNameStr += '{}, '.format(t)
+        else:
+            tNameStr = tName
+        resDict = self.get_con_str_inf(tNameStr, tCon_str, tCols)
         return resDict
 
     def get_station_inf(self, stnID, tCols=['OBJ_ID', 'NAME', 'FULL_NAME', 
@@ -152,5 +161,15 @@ class PCNDB():
         selectSQL = 'SELECT {} FROM {}'.format(tCols_str, tName)
         cols, rows = self._exec_sql(selectSQL)
         res = self._trans_dict(cols, rows)
+        return res
+
+    def get_fac_inf(self, c_id, tCols=['T_SYS.NAME']):
+        tName= ['T_CHANNEL_BASE, T_SYS, T_NE']
+        conDict = {
+            'T_CHANNEL_BASE.OBJ_ID': [[c_id], '=', 'str'],
+            'T_NE.OBJ_ID': [['T_CHANNEL_BASE.A_NE'], '=', 'name'],
+            'T_SYS.OBJ_ID': [['T_NE.SYS_ID'], '=', 'name']
+        }
+        res = self.get_con_dict_inf(tName=tName, conDict=conDict, tCols=tCols, conLogicList=['and', 'and'])
         return res
         
