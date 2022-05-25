@@ -245,7 +245,6 @@ class PCNROUTE():
             self.channelInf = channelInf
             self.pcnMap = pcnMap
             self.routeDict = routeDict
-
         return routeDict
 
 
