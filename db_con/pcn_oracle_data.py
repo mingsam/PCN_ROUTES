@@ -172,4 +172,12 @@ class PCNDB():
         }
         res = self.get_con_dict_inf(tName=tName, conDict=conDict, tCols=tCols, conLogicList=['and', 'and'])
         return res
+    
+    def get_buss_type(self, b_id, tCols=['BUZ_TYPE']):
+        tName = 'T_BUZ'
+        conDict = {
+            'OBJ_ID':[[b_id], '=', 'str']
+        }
+        res = self.get_con_dict_inf(tName=tName, conDict=conDict, tCols=tCols)
+        return res
         
