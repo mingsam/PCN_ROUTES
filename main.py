@@ -2,7 +2,7 @@ import os
 
 from pcn_route import PCNROUTE
 from route_limit import RoutesLimit
-from route_optimun import RouteOpti
+from route_optimum import RouteOpti
 from utools.yml_io import *
 from utools.pickle_io import *
 
