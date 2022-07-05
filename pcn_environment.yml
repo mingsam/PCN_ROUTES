@@ -15,7 +15,7 @@ dependencies:
   - bottleneck=1.3.4=py39hce1f21e_0
   - brotli=1.0.9=he6710b0_2
   - ca-certificates=2022.4.26=h06a4308_0
-  - certifi=2021.10.8=py39h06a4308_2
+  - certifi=2022.6.15=py39h06a4308_0
   - cffi=1.15.0=py39hd667e15_1
   - cycler=0.11.0=pyhd3eb1b0_0
   - dbus=1.13.18=hb2f20db_0
@@ -81,7 +81,6 @@ dependencies:
   - nest-asyncio=1.5.5=py39h06a4308_0
   - notebook=6.4.8=py39h06a4308_0
   - numexpr=2.8.1=py39h6abb31d_0
-  - numpy-base=1.21.5=py39hf524024_1
   - openssl=1.1.1n=h7f8727e_0
   - packaging=21.3=pyhd3eb1b0_0
   - pandas=1.4.2=py39h295c915_0
@@ -106,6 +105,7 @@ dependencies:
   - python-dateutil=2.8.2=pyhd3eb1b0_0
   - python-fastjsonschema=2.15.1=pyhd3eb1b0_0
   - pytz=2021.3=pyhd3eb1b0_0
+  - pyyaml=6.0=py39h7f8727e_1
   - pyzmq=22.3.0=py39h295c915_2
   - qt=5.9.7=h5867ecd_1
   - qtconsole=5.3.0=pyhd3eb1b0_0
@@ -132,6 +132,7 @@ dependencies:
   - wheel=0.37.1=pyhd3eb1b0_0
   - widgetsnbextension=3.5.2=py39h06a4308_0
   - xz=5.2.5=h7b6447c_0
+  - yaml=0.2.5=h7b6447c_0
   - zeromq=4.3.4=h2531618_0
   - zlib=1.2.12=h7f8727e_2
   - zstd=1.4.9=haebb681_0
@@ -140,4 +141,4 @@ dependencies:
     - networkx==2.8
     - numpy==1.22.3
     - scipy==1.8.0
-prefix: /root/anaconda3/envs/pcn_route
+prefix: /home/wzk/anaconda3/envs/pcn_route
